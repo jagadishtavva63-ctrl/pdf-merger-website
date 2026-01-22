@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PDF Merger Tool</title>
+<style>
+body {
+  font-family: Arial;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  text-align: center;
+  padding-top: 80px;
+}
+
+.container {
+  background: white;
+  width: 400px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+  margin-top: 15px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #4facfe;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00c6ff;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>PDF Merger Tool</h1>
+<p>Merge multiple PDF files easily</p>
+
+<form action="/merge" method="POST" enctype="multipart/form-data">
+<input type="file" name="pdfs" multiple required>
+<br>
+<button type="submit">Merge PDFs</button>
+</form>
+
+</div>
+</body>
+</html>
