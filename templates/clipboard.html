@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Clipboard Tool</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>📋 Online Clipboard</h1>
+
+<textarea id="clip" placeholder="Paste or type text here..." style="width:80%; height:200px;"></textarea>
+
+<br><br>
+
+<button onclick="saveText()">Save</button>
+<button onclick="copyText()">Copy</button>
+
+<script>
+function saveText() {
+  localStorage.setItem("clipboardText", document.getElementById("clip").value);
+  alert("Saved!");
+}
+
+function copyText() {
+  navigator.clipboard.writeText(document.getElementById("clip").value);
+  alert("Copied!");
+}
+
+document.getElementById("clip").value = localStorage.getItem("clipboardText") || "";
+</script>
+
+</body>
+</html>
