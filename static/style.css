@@ -1,24 +1,26 @@
-body {
-  font-family: Arial;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  text-align: center;
-  padding-top: 80px;
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 40px auto;
 }
 
-.container {
+.tool-card {
   background: white;
-  width: 400px;
-  margin: auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  color: black;
+  text-decoration: none;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: 0.2s;
 }
 
-button {
-  padding: 10px 25px;
-  background: #4facfe;
-  border: none;
+.tool-card:hover {
+  transform: scale(1.05);
+  background: #2a5298;
   color: white;
-  border-radius: 8px;
-  font-size: 16px;
 }
