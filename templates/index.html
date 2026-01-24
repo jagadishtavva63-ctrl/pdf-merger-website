@@ -1,62 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-<title>PDF Merger Tool</title>
-<style>
-body {
-  font-family: Arial;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  text-align: center;
-  padding-top: 80px;
-}
-
-.container {
-  background: white;
-  width: 400px;
-  margin: auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-h1 {
-  color: #333;
-}
-
-input {
-  margin-top: 15px;
-}
-
-button {
-  margin-top: 20px;
-  padding: 10px 25px;
-  background: #4facfe;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #00c6ff;
-}
-</style>
+<title>PDF Tools - Premium Online Tools</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
+<header>🔥 Premium PDF Tools</header>
+
 <div class="container">
-<h1>PDF Merger Tool</h1>
-<p>Merge multiple PDF files easily</p>
+<div class="card">
+
+<h2>📄 Merge PDF Files</h2>
+<p>Combine multiple PDFs into one file instantly</p>
 
 <form action="/merge" method="POST" enctype="multipart/form-data">
+
+<label class="upload-box">
+Drag & Drop PDFs Here<br><br>
+Click to Upload
 <input type="file" name="pdfs" multiple required>
-<br>
+</label>
+
 <button type="submit">Merge PDFs</button>
+
 </form>
 
+<a href="/tools"><button>🧰 View All Tools</button></a>
+
 </div>
+</div>
+
 </body>
 </html>
